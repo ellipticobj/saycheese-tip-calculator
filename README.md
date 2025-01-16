@@ -4,5 +4,6 @@ super simple tip calculator made in html and javascript that is super minified t
 made for [saycheese](https://saycheese.hackclub.com/)  
 
 # tools used
-[qr code generator](https://www.qr-code-generator.com/solutions/dynamic-url-qr-code/)  
+[qr code generator](https://qrcode.tec-it.com/en)  
+[data uri generator](https://mattiasw.github.io/self-contained/)
 [minifier](https://kangax.github.io/html-minifier/) (+ my brain)  

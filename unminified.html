@@ -39,34 +39,41 @@
                 cursor: pointer;
                 font-size: 16px;
             }
+
+            p {
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+            }
         </style>
     </html>
     <body>
         <div class="calculator">
             <h1>tip calculator</h1>
 
-            <label for="bill">bill subtotal:</label>
+            <label for="tip">bill subtotal:</label>
             <input type="text" id="bill" name="bill" placeholder="enter bill" required>
             <br>
             <label for="tip">tip percentage:</label>
             <input type="text" id="tip" name="tip" placeholder="tip percentage" required>
             <br>
             <button onclick="calculate()" type="submit">submit</button>
+            <p id="tipo"></p>
+            <p id="totalo"></p>
         </div>
-        <p id="tip"></p>
-        <p id="total"></p>
 
         <script>
             function calculate() {
                 const bill = document.getElementById("bill").value;
                 const tip = document.getElementById("tip").value;
                 if (!isNaN(bill) && !isNaN(tip)) {
-                    const tipAmount = bill * (tip / 100);
-                    const total = bill + tipAmount;
-                    document.getElementById("tip").innerHTML = `tip: $${tip.toFixed(2)}`
-                    document.getElementById("total").innerHTML = `total: $${bill.toFixed(2)}`
+                    const tipamnt = parseFloat(bill * (tip / 100));
+                    const totalamnt = parseFloat(bill + tipamnt);
+                    document.getElementById("tipo").innerHTML = `tip: $${tipamnt.toFixed(2)}`
+                    document.getElementById("totalo").innerHTML = `total: $${totalamnt.toFixed(2)}`
                 } else {
-                    document.getElementById("tip").innerHTML = 'please enter a valid number'
+                    document.getElementById("tipo").innerHTML = 'please enter a valid number'
+                    document.getElementById("totalo").innerHTML = ''
                 }
             }
         </script>
