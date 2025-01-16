@@ -5,5 +5,5 @@ made for [saycheese](https://saycheese.hackclub.com/)
 
 # tools used
 [qr code generator](https://qrcode.tec-it.com/en)  
-[data uri generator](https://mattiasw.github.io/self-contained/)
+[data uri generator](https://www.antvaset.com/data-uri-generator)
 [minifier](https://kangax.github.io/html-minifier/) (+ my brain)  
