@@ -51,31 +51,18 @@
         <div class="calculator">
             <h1>tip calculator</h1>
 
-            <label for="tip">bill subtotal:</label>
-            <input type="text" id="bill" name="bill" placeholder="enter bill" required>
+            <label for="b">bill($):</label>
+            <input type="text" id="b" name="b" placeholder="bill" required>
             <br>
-            <label for="tip">tip percentage:</label>
-            <input type="text" id="tip" name="tip" placeholder="tip percentage" required>
+            <label for="t">tip(%):</label>
+            <input type="text" id="t" name="t" placeholder="tip" required>
             <br>
-            <button onclick="calculate()" type="submit">submit</button>
-            <p id="tipo"></p>
-            <p id="totalo"></p>
+            <button onclick="c()" type="submit">submit</button>
+            <p id="x"></p>
+            <p id="o"></p>
         </div>
 
-        <script>
-            function calculate() {
-                const bill = document.getElementById("bill").value;
-                const tip = document.getElementById("tip").value;
-                if (!isNaN(bill) && !isNaN(tip)) {
-                    const tipamnt = parseFloat(bill * (tip / 100));
-                    const totalamnt = parseFloat(bill + tipamnt);
-                    document.getElementById("tipo").innerHTML = `tip: $${tipamnt.toFixed(2)}`
-                    document.getElementById("totalo").innerHTML = `total: $${totalamnt.toFixed(2)}`
-                } else {
-                    document.getElementById("tipo").innerHTML = 'please enter a valid number'
-                    document.getElementById("totalo").innerHTML = ''
-                }
-            }
+        <script>function c(){const b = document.getElementById("b").value;const t = document.getElementById("t").value;if(!isNaN(b) && !isNaN(t)){const tip = parseFloat(b*(t/100));const tot=parseFloat(b+t);document.getElementById("x").innerHTML=`tip: $${tip.toFixed(2)}`;document.getElementById("o").innerHTML=`total: $${tot.toFixed(2)}`;}else{document.getElementById("x").innerHTML = 'please enter a valid number';document.getElementById("o").innerHTML = '';}}
         </script>
     </body>
 </html>
