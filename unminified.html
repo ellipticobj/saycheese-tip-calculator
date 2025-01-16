@@ -63,8 +63,8 @@
                 if (!isNaN(bill) && !isNaN(tip)) {
                     const tipAmount = bill * (tip / 100);
                     const total = bill + tipAmount;
-                    document.getElementById("tip").innerHTML = 'tip: $${tip.toFixed(2)}'
-                    document.getElementById("total").innerHTML = 'total: $${bill.toFixed(2)}'
+                    document.getElementById("tip").innerHTML = `tip: $${tip.toFixed(2)}`
+                    document.getElementById("total").innerHTML = `total: $${bill.toFixed(2)}`
                 } else {
                     document.getElementById("tip").innerHTML = 'please enter a valid number'
                 }
